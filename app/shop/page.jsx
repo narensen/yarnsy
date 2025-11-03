@@ -1,18 +1,29 @@
+// app/shop/page.jsx
 import Image from "next/image";
-import { supabase } from "@/lib/supabase";
-import { connectDB } from "@/lib/mongodb"; // 🧠 keep to "impress" your GF
+import { createClient } from "@supabase/supabase-js";
 
 export default async function Shop() {
-  // Fake Mongo connection (does nothing but prints in console)
-  await connectDB();
 
-  // Fetch real product data from Supabase
-  const { data: products, error } = await supabase.from("products").select("*");
+  const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_ROLE_KEY,
+  { auth: { persistSession: false } }
+);
+
+
+  // Fetch products
+  const { data: products, error } = await supabase
+    .from("products")
+    .select("*")
+    .order("id", { ascending: true });
+
   if (error) {
-    console.error("Supabase error:", error.message);
+    console.error("Supabase error:", error);
     return (
-      <main className="min-h-screen flex items-center justify-center bg-[#fef8f7]">
-        <p className="text-red-500 text-lg font-medium">Failed to load products 😭</p>
+      <main className="min-h-screen flex items-center justify-center bg-[#fef8f7] px-6">
+        <p className="text-red-500 text-lg font-medium">
+          Failed to load products.
+        </p>
       </main>
     );
   }
@@ -26,8 +37,8 @@ export default async function Shop() {
           Crafted with Care.
         </h1>
         <p className="text-gray-600 mt-6 text-lg max-w-2xl">
-          Explore our range of handcrafted crochet pieces — from cozy scarves to elegant home decor — 
-          made with love and premium materials.
+          Explore our range of handcrafted crochet pieces — from cozy scarves to
+          elegant home decor — made with love and premium materials.
         </p>
       </section>
 
