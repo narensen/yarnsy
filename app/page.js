@@ -16,10 +16,13 @@ export default function Home() {
           made with premium yarns and artisanal care.
         </p>
 
-        <button className="mt-8 bg-[#cab8f7] text-white px-6 py-3 rounded-full hover:bg-[#b9a2f5] transition flex items-center space-x-2">
-          <Link href="/shop">Shop Now</Link>
-          <span>→</span>
-        </button>
+        <Link href="/shop">
+          <button className="mt-8 bg-[#cab8f7] text-white px-6 py-3 rounded-full hover:bg-[#b9a2f5] transition flex items-center space-x-2">
+            Shop Now
+            <span>→</span>
+          </button>
+        </Link>
+        
       </section>
     </main>
   );
