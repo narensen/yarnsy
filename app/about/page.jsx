@@ -1,62 +1,55 @@
 export default function About() {
   return (
-    <main className="min-h-screen bg-[#fef8f7] flex flex-col justify-center px-6">
+    <main className="min-h-screen bg-black text-white flex flex-col justify-center px-6">
       <section className="max-w-4xl mx-auto text-left pt-28 pb-16">
-        <h1 className="text-5xl font-serif font-semibold text-gray-900 leading-tight mb-6">
+        <h1 className="text-5xl font-serif font-semibold leading-tight mb-6">
           Our Story – <br />
-          Where Craft Meets Soul.
+          Where Strength Meets Purpose.
         </h1>
 
-        <p className="text-gray-700 text-lg leading-relaxed mb-6">
-          At <span className="font-semibold text-gray-900">Yarnsy</span>, we believe
-          every thread tells a story. What began as a small passion for handcrafted
-          crochet art has grown into a conscious craft movement — one that values
-          patience, precision, and purpose. Our creations celebrate the warmth of
-          human touch in a world that’s racing toward automation.
+        <p className="text-gray-300 text-lg leading-relaxed mb-6">
+          At <span className="font-semibold text-white">IronPulse</span>, we believe
+          fitness is more than reps and sets — it’s a mindset. What started as a small
+          vision to build durable, no-nonsense gym gear has grown into a mission to
+          empower athletes, lifters, and everyday grinders to push beyond their limits.
         </p>
 
-        <p className="text-gray-700 text-lg leading-relaxed mb-6">
-          Each piece is designed and made with love by skilled artisans who pour
-          their time, technique, and spirit into every knot and loop. We work with
-          premium yarns, natural fibers, and ethical practices to ensure that our
-          products aren’t just beautiful — they’re meaningful.
+        <p className="text-gray-300 text-lg leading-relaxed mb-6">
+          Every piece of equipment we design is forged with precision, endurance,
+          and performance in mind. From barbells to benches, we engineer products
+          that can take a beating — and keep up with your intensity. No gimmicks.
+          No shortcuts. Just gear that performs as hard as you do.
         </p>
 
-        <p className="text-gray-700 text-lg leading-relaxed">
-          Whether it’s a cozy cardigan, a delicate shawl, or a handmade accessory,
-          Yarnsy is a reminder that real beauty lies in craftsmanship, care, and
-          connection. Threads with soul — that’s our promise.
+        <p className="text-gray-300 text-lg leading-relaxed">
+          Whether you’re chasing PRs, building muscle, or sharpening your focus,
+          <span className="font-semibold text-white"> IronPulse </span> is here
+          to equip your journey. Built strong. Built to last. Built for you.
         </p>
       </section>
 
       <section className="max-w-4xl mx-auto pb-20">
-        <h2 className="text-3xl font-serif font-semibold text-gray-900 mb-4">
-          Our Values
+        <h2 className="text-3xl font-serif font-semibold mb-8">
+          Our Core Values
         </h2>
-        <ul className="grid md:grid-cols-3 gap-8 text-gray-700">
-          <li className="bg-white rounded-2xl shadow-sm border border-[#f3ebe9] p-6">
-            <h3 className="font-semibold text-lg mb-2 text-gray-900">
-              Conscious Craft
+        <ul className="grid md:grid-cols-3 gap-8 text-gray-300">
+          <li className="bg-[#111111] rounded-2xl border border-gray-700 p-6 hover:border-[#b9a2f5] transition">
+            <h3 className="font-semibold text-lg mb-2 text-white">
+              Built to Endure
             </h3>
-            <p>Every product is handmade with care, using eco-conscious materials.</p>
+            <p>Every product is tested for performance and durability — gear that lasts through every drop of sweat and rep.</p>
           </li>
-          <li className="bg-white rounded-2xl shadow-sm border border-[#f3ebe9] p-6">
-            <h3 className="font-semibold text-lg mb-2 text-gray-900">
-              Artisanal Heritage
+          <li className="bg-[#111111] rounded-2xl border border-gray-700 p-6 hover:border-[#b9a2f5] transition">
+            <h3 className="font-semibold text-lg mb-2 text-white">
+              Driven by Athletes
             </h3>
-            <p>
-              We support local artisans and traditional crochet techniques that have
-              stood the test of time.
-            </p>
+            <p>We collaborate with real athletes and trainers to design equipment that meets the demands of serious training.</p>
           </li>
-          <li className="bg-white rounded-2xl shadow-sm border border-[#f3ebe9] p-6">
-            <h3 className="font-semibold text-lg mb-2 text-gray-900">
-              Sustainable Future
+          <li className="bg-[#111111] rounded-2xl border border-gray-700 p-6 hover:border-[#b9a2f5] transition">
+            <h3 className="font-semibold text-lg mb-2 text-white">
+              Strength with Integrity
             </h3>
-            <p>
-              Our mission is to create fashion that lasts — pieces that are as kind
-              to the planet as they are to the wearer.
-            </p>
+            <p>Our mission is to elevate performance without compromise — honest quality, ethical sourcing, and precision engineering.</p>
           </li>
         </ul>
       </section>
